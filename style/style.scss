@@ -1,0 +1,198 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Hanken Grotesk", sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: bgGradient 15s ease infinite;
+}
+
+@keyframes bgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+//right
+.contaion {
+  width: 95%;
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: -1px 2px 11px 1px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: -1px 2px 11px 1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: -1px 2px 11px 1px rgba(0, 0, 0, 0.54);
+  animation: imageSlide 60s infinite alternate-reverse;
+}
+@keyframes imageSlide {
+  0% {
+    background-image: url(../image/Snow.jpg);
+  }
+  25% {
+    background-image: url(../image/Runny.jpg);
+  }
+  50% {
+    background-image: url(../image/garun.webp);
+  }
+  75% {
+    background-image: url(../image/sunney.jpeg);
+  }
+  100% {
+    background-image: url(../image/sever.jpg);
+  }
+}
+.main_info {
+  width: 60%;
+  height: 100%;
+  padding: 5% 8%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+
+.logo_cont {
+  width: 100%;
+  height: 20%;
+  .logo {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-image: url("../image/Logo.png");
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.info {
+  display: flex;
+  align-items: flex-end;
+  gap: 8%;
+  width: 100%;
+  height: 40%;
+  text-align: left;
+}
+.temperature {
+  font-size: 8vw;
+}
+.location_name {
+  font-size: 3.5vw;
+  .day {
+    font-size: 2.5vw;
+  }
+}
+.weather_icon {
+  font-size: 2.5vw;
+}
+//left
+.weather_search_location_details {
+  width: 40%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  padding: 5%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  color: white;
+}
+.location {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  font-size: 2vw;
+  gap: 2%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 2%;
+  span {
+    cursor: pointer;
+  }
+}
+.weather_details {
+  height: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-size: 2.5vw;
+  gap: 2%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 5%;
+  div {
+    font-size: 2vw;
+  }
+}
+.search_location {
+  height: 15%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  input {
+    width: 60%;
+    height: 50%;
+    border: none;
+    background-color: transparent;
+    color: gray;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    &::placeholder {
+      color: white;
+      font-family: "Hanken Grotesk", sans-serif;
+    }
+    &:focus {
+      outline: none;
+      color: white;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+  .search {
+    width: 2.5vw;
+    aspect-ratio: 1/1;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5vw;
+    color: white;
+    cursor: pointer;
+  }
+}
+.wind {
+  display: flex;
+  justify-content: space-between;
+}
+.humidity {
+  display: flex;
+  justify-content: space-between;
+}
+.cloudy {
+  display: flex;
+  justify-content: space-between;
+}
+.icon_size {
+  width: 5vw;
+  aspect-ratio: 1/1;
+}

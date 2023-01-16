@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="image/Logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script/app.js" defer></script>
+  </head>
+  <body>
+    <section class="content">
+      <div class="contaion">
+        <div class="main_info">
+          <div class="logo_cont">
+            <div class="logo"></div>
+          </div>
+          <div class="info">
+            <div class="temperature">16°</div>
+            <div class="location_name">
+              <div class="city_name">london</div>
+              <div class="day"></div>
+            </div>
+            <div class="weather_icon">
+              <div class="icon"></div>
+              <div class="icon_text"></div>
+            </div>
+          </div>
+        </div>
+        <div class="weather_search_location_details">
+          <div class="search_location">
+            <input type="text" placeholder="Another location" id="search" />
+            <button class="search">
+              <i class="fa-solid fa-magnifying-glass"> </i>
+            </button>
+          </div>
+          <div class="location">
+            <div class="yerevan" data-city="Yerevan">
+              <span>Yerevan</span>
+            </div>
+            <div class="hrazdan" data-city="Hrazdan">
+              <span>Hrazdan</span>
+            </div>
+            <div class="newYork" data-city="New York">
+              <span>New York</span>
+            </div>
+            <div class="moscow" data-city="Moscow">
+              <span>Moscow</span>
+            </div>
+          </div>
+          <div class="weather_details">
+            <p class="title">Weather Details</p>
+            <div class="cloudy">
+              <div class="cloudy_title">Cloudy</div>
+              <div class="cloudy_info"></div>
+            </div>
+            <div class="humidity">
+              <div class="humidity_title">Humidity</div>
+              <div class="humidity_info"></div>
+            </div>
+            <div class="wind">
+              <div class="wind_title">Wind</div>
+              <div class="wind_info"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
